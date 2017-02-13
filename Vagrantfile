@@ -11,8 +11,16 @@ Vagrant.configure(2) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.json = {
       project_dir: '/vagrant/dev',
+      # Change this to your own git configs
+      git: {
+        user_name: 'jimlind',
+        user_email: 'spoon.vw@gmail.com',
+        repository_url: 'https://github.com/jimlind/tivo-php.git',
+        repository_dir: 'tivo-php-y',
+      }
     }
     chef.run_list = [
+      'recipe[base_setup]',
       'recipe[composer]',
       'recipe[git]',
       'recipe[php7]',
