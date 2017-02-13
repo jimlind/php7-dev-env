@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
         user_name: 'jimlind',
         user_email: 'spoon.vw@gmail.com',
         repository_url: 'https://github.com/jimlind/tivo-php.git',
-        repository_dir: 'tivo-php-y',
+        repository_dir: 'tivo-php',
       }
     }
     chef.run_list = [
