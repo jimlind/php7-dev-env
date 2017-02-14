@@ -15,7 +15,7 @@ apt_repository "deb-sury-org" do
   action       :add
 end
 
-apt_package "php7.1" do
+apt_package ["php7.1", "php7.1-xml", "php7.1-curl", "php7.1-zip", "php7.1-mbstring"] do
   action :install
 end
 
